@@ -22,10 +22,10 @@ def index(request):
 
 def about(request):
     
-    context_dict = { 'MEDIA_URL': '/media/'}
-    # Return a rendered response to send to the client.
+    print(request.method)
+    print(request.user)
 
-    return render(request, 'rango/about.html')
+    return render(request, 'rango/about.html', {})
 
 def show_category(request, category_name_slug):
     
